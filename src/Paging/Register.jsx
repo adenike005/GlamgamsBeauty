@@ -49,20 +49,20 @@
 
 
 
-import React from 'react'
-import '../Style/Register.css'
+import React from 'react';
+import '../Style/Register.css';
 
 function Register() {
   return (
     <main>
       <div className="box">
-        <div className="inner_box">
-          <div className="form_wrap"></div>
+        <div className="inner-box">
+          <div className="form-wrap"></div>
           <div className="carousel"></div>
         </div>
       </div>
     </main>
-  )
+  );
 }
 
-export default Register
+export default Register;
