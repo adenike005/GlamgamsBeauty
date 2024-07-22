@@ -1,61 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
 }
 
 .header{
+    width: 100%;
+    padding: 0.5rem 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+
 }
 
 .nav-menu{
     display: flex;
 }
 
-.nav-menu li{
-    padding: 0 1rem;
-    list-style: none;
-}
-
 .nav-menu li a{
-    font-size: 1rem;
-   
+    margin-inline: 0.5rem;
+    color: #000;
 }
 
-.hamburger{
+.logo{
+    color: #000;
+    font-family: "Italiana", cursive;
+    font-weight: 'light';
+    cursor: pointer;
+    font-size: 1.7rem;
+    /* font-style: normal; */
+}
+
+.icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+span{
+    color: #000;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.box{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(216, 205, 205, 0.329);
+    padding: 0.5rem 1rem;
+    border-radius: 0.2rem;
+}
+
+.box input {
+
+    outline: none;
+    border-width: 0;
+    background-color: rgba(216, 205, 205, 0.329);
+    color: #000;
+
+  }
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
     
-    display: none;
-    margin-inline: 0.5rem;
+.iconbox{
+    background-color: pink;
+    margin-inline: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
     cursor: pointer;
 }
 
-.header_icon{
-    display: flex;
-    align-items: center;
-    
+.hamburger{
+    display: none;
 }
 
+
+
 @media screen and (max-width: 800px) {
+    .hamburger{
+        display: block;
+    }
     .nav-menu{
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 100%;
         height: 100vh;
-        background-color: blue;
         position: absolute;
         top: 0;
         left: -100%;
+        background-color: #fff;
         z-index: -3;
+    }
+
+    .nav-menu li{
+        padding: 1rem;
+    }
+
+    .nav-menu li a{
+        color: #000;
+        font-size: 2rem;
     }
 
     .nav-menu.active{
         left: 0;
     }
-    .hamburger{
-        display: block;
-    }
+
+  
 }
