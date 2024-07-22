@@ -8,7 +8,7 @@
 
 .header{
     width: 100%;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,15 +21,15 @@
 
 .nav-menu li a{
     margin-inline: 0.5rem;
-    color: #000;
+    color: #fff;
 }
 
 .logo{
-    color: #000;
+    color: #C8B6EA;
     font-family: "Italiana", cursive;
     font-weight: 'light';
     cursor: pointer;
-    font-size: 1.7rem;
+    font-size: 2rem;
     /* font-style: normal; */
 }
 
@@ -71,7 +71,7 @@ span{
 }
     
 .iconbox{
-    background-color: pink;
+    background-color: #C8B6EA;
     margin-inline: 5px;
     width: 30px;
     height: 30px;

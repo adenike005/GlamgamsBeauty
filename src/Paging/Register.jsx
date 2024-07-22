@@ -137,20 +137,21 @@ import "../Style/Register.css";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+import about from '../../public/images/about.png'
 
 function Register() {
   return (
    <div className="form_Contain">
-     <div className="form_container">
-      <div className="word">
-        <h2>Sign In</h2>
+     <div className="container">
+      {/* <h1>Welcome to GemGlam</h1> */}
+
+      <div className="form_contains">
+        <div className="form_box1">
+          <img src={about} alt="image"/>
+        </div>
+        <div className="form_box1"></div>
       </div>
-      <div className="words">
-        <h2>Welcome to GlamgamsBeauty</h2>
-        <h6>Already have an account?</h6>
-        <Link to="/login">Sign In</Link>
-      </div>
-    </div>
+     </div>
    </div>
   );
 }
