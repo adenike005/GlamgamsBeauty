@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import "../Styles/Header.css";
 import { Container, Row } from "reactstrap";
 import { NavLink } from "react-router-dom";
@@ -22,6 +22,20 @@ const nav_link = [
 ];
 
 const Header = () => {
+  const menuRef = useRef(null);
+
+  const menuToggle = () => {
+    const menu = menuRef.current;
+    const body = document.body;
+    menu.classList.toggle('active_menu');
+    body.classList.toggle('no-scroll');
+  };
+
+  const handleNavLinkClick = () => {
+    menuRef.current.classList.remove('active_menu');
+    document.body.classList.remove('no-scroll');
+  };
+
   return (
     <div className="header">
       <Container>
@@ -30,11 +44,17 @@ const Header = () => {
             <div className="logo">
               <img src={Logo} alt="Logo" />
             </div>
-            <div className="navigation">
+            <div className="navigation" ref={menuRef}>
               <ul className="menu">
                 {nav_link.map((item, index) => (
                   <li className="nav_item" key={index}>
-                    <NavLink to={`/${item.path}`} className={(navClass) => navClass.isActive ? 'nav_active': ''}>{item.display}</NavLink>
+                    <NavLink 
+                      to={`/${item.path}`} 
+                      className={(navClass) => navClass.isActive ? 'nav_active' : ''}
+                      onClick={handleNavLinkClick}
+                    >
+                      {item.display}
+                    </NavLink>
                   </li>
                 ))}
               </ul>
@@ -50,14 +70,13 @@ const Header = () => {
                 <div className="badge">1</div>
               </span>
               <span>
-                <motion.img whileTap={{scale: 3.2}} src={user} alt="user" />
+                <motion.img whileTap={{ scale: 3.2 }} src={user} alt="user" />
               </span>
-            </div>
-
-            <div className="mobile_menu">
-              <span>
-                <i className='ri-menu-line'></i>
-              </span>
+              <div className="mobile_menu">
+                <span onClick={menuToggle}>
+                  <i className='ri-menu-line'></i>
+                </span>
+              </div>
             </div>
           </div>
         </Row>
@@ -67,6 +86,7 @@ const Header = () => {
 };
 
 export default Header;
+
 
 
 

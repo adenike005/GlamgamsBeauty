@@ -3,8 +3,9 @@
 }
 
 .hero_img{
-    width: 80%;
-    height: 80%;
+    width: 90%;
+    height: 100%;
+    margin-top: -5%;
 }
 
 .hero_section h2{
@@ -29,9 +30,14 @@
     color: #fff;
     cursor: pointer;
     font-size: 1rem;
+    margin-bottom: 5%;
 }
 
 .buy_btn a{
     text-decoration: none;
     color: #fff
+}
+
+.hero-_Content{
+    margin-top: 5%;
 }

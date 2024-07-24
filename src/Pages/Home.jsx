@@ -17,8 +17,8 @@ const Home = () => {
             <p className="hero_Subtitle">Treading Product in {year}</p>
             <h2>Enhance your style with exquisite beauty products.</h2>
             <p>ElegantStyle Beauty Company delivers timeless elegance with premium beauty products designed to enhance and celebrate your natural grace.</p>
-            <motion.button whileTap={{scale: 2.2}}className="buy_btn">
-              <Link to="/shop">Shop</Link>
+            <motion.button whileTap={{scale: 2.1}}className="buy_btn">
+              <Link to="/shop">Shop Now</Link>
             </motion.button>
           </div>
         </Col>
