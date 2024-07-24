@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "../Styles/Header.css";
 import { Container, Row } from "reactstrap";
 import { NavLink } from "react-router-dom";
@@ -22,18 +22,27 @@ const nav_link = [
 ];
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef(null);
 
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+  }, [menuOpen]);
+
   const menuToggle = () => {
-    const menu = menuRef.current;
-    const body = document.body;
-    menu.classList.toggle('active_menu');
-    body.classList.toggle('no-scroll');
+    setMenuOpen(!menuOpen);
   };
 
   const handleNavLinkClick = () => {
-    menuRef.current.classList.remove('active_menu');
-    document.body.classList.remove('no-scroll');
+    setMenuOpen(false);
+  };
+
+  const handleBackgroundClick = () => {
+    setMenuOpen(false);
   };
 
   return (
@@ -44,8 +53,8 @@ const Header = () => {
             <div className="logo">
               <img src={Logo} alt="Logo" />
             </div>
-            <div className="navigation" ref={menuRef}>
-              <ul className="menu">
+            <div className={`navigation ${menuOpen ? 'active_menu' : ''}`} ref={menuRef} onClick={handleBackgroundClick}>
+              <ul className="menu" onClick={(e) => e.stopPropagation()}>
                 {nav_link.map((item, index) => (
                   <li className="nav_item" key={index}>
                     <NavLink 
@@ -79,6 +88,7 @@ const Header = () => {
               </div>
             </div>
           </div>
+          {menuOpen && <div className="fixed-background" onClick={handleBackgroundClick}></div>}
         </Row>
       </Container>
     </div>
@@ -86,6 +96,8 @@ const Header = () => {
 };
 
 export default Header;
+
+
 
 
 
