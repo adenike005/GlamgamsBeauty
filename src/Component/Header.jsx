@@ -2,7 +2,24 @@ import React from "react";
 import "../Styles/Header.css";
 import { Container, Row } from "reactstrap";
 import { NavLink } from "react-router-dom";
-import user from '../../public/images/usericon.png'
+import user from '/images/usericon.png';
+import Logo from '/images/logo.png';
+import { motion } from "framer-motion";
+
+const nav_link = [
+  {
+    path: 'home',
+    display: 'Home'
+  },
+  {
+    path: 'shop',
+    display: 'Shop'
+  },
+  {
+    path: 'cart',
+    display: 'Cart'
+  },
+];
 
 const Header = () => {
   return (
@@ -11,36 +28,37 @@ const Header = () => {
         <Row>
           <div className="nav_Wrapper">
             <div className="logo">
-                <span>GemGlam</span>
+              <img src={Logo} alt="Logo" />
             </div>
             <div className="navigation">
-                <ul className="menu">
-                    <li className="nav_item">
-                        <NavLink to='home'>Home</NavLink>
-                    </li>
-                    <li className="nav_item">
-                        <NavLink to='shop'>Shop</NavLink>
-                    </li>
-                    <li className="nav_item">
-                        <NavLink to='cart'>Cart</NavLink>
-                    </li>
-                </ul>
+              <ul className="menu">
+                {nav_link.map((item, index) => (
+                  <li className="nav_item" key={index}>
+                    <NavLink to={`/${item.path}`} className={(navClass) => navClass.isActive ? 'nav_active': ''}>{item.display}</NavLink>
+                  </li>
+                ))}
+              </ul>
             </div>
 
             <div className="nav_icons">
-                <span className="fav_icon">
-                    <i class= 'ri-heart-line'></i>
-                </span>
-                <span className="cart_icon">
-                    <i class='ri-shopping-bag-line'></i>
-                </span>
-                <span><img src={user} alt="logo" /></span>
+              <span className="fav_icon">
+                <i className='ri-heart-line'></i>
+                <div className="badge">1</div>
+              </span>
+              <span className="cart_icon">
+                <i className='ri-shopping-bag-line'></i>
+                <div className="badge">1</div>
+              </span>
+              <span>
+                <motion.img whileTap={{scale: 3.2}} src={user} alt="user" />
+              </span>
             </div>
 
             <div className="mobile_menu">
-                <span><i class='ri-menu-line'></i></span>
+              <span>
+                <i className='ri-menu-line'></i>
+              </span>
             </div>
-
           </div>
         </Row>
       </Container>
@@ -49,3 +67,9 @@ const Header = () => {
 };
 
 export default Header;
+
+
+
+
+
+
