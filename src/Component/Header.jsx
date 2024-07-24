@@ -22,6 +22,23 @@ const nav_link = [
 ];
 
 const Header = () => {
+
+  const headerRef = useRef(null);
+  const stickyHeaderRunc = () =>{
+    window.addEventListener('scroll', () =>{
+      if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80){
+        headerRef.current.classList.add('sticky_header')
+      }else{
+        headerRef.current.classList.remove('sticky_header')
+      }
+    })
+  }
+
+  useEffect(() =>{
+   stickyHeaderRunc()
+   return () => window.removeEventListener('scroll', stickyHeaderRunc)
+  })
+
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef(null);
 
@@ -46,7 +63,7 @@ const Header = () => {
   };
 
   return (
-    <div className="header">
+    <div className="header" ref={headerRef}>
       <Container>
         <Row>
           <div className="nav_Wrapper">
@@ -72,11 +89,11 @@ const Header = () => {
             <div className="nav_icons">
               <span className="fav_icon">
                 <i className='ri-heart-line'></i>
-                <div className="badge">1</div>
+                {/* <div className="badge">1</div> */}
               </span>
               <span className="cart_icon">
                 <i className='ri-shopping-bag-line'></i>
-                <div className="badge">1</div>
+                {/* <div className="badge">1</div> */}
               </span>
               <span>
                 <motion.img whileTap={{ scale: 3.2 }} src={user} alt="user" />
