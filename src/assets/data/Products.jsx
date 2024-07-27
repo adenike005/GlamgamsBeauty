@@ -16,7 +16,7 @@ import productImg13 from "../../../public/images/n10.png";
 
 
 import productImg14 from "../../../public/images/n1.png";
-import productImg14 from "../../../public/images/n2.png";
+import productImg15 from "../../../public/images/n2.png";
 
 import productImg16 from "../../../public/images/n1.png";
 import productImg17 from "../../../public/images/n3.png";

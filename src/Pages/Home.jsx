@@ -1,12 +1,19 @@
-import React from 'react'
+import React,{useState, useEffect} from 'react'
 import Halmet from '../Component/Halmet'
 import { Container, Row, Col } from 'reactstrap'
 import main from '/images/about3.png'
 import { Link } from 'react-router-dom'
 import '../Styles/Home.css'
 import { motion } from 'framer-motion'
+import ProductList from '../Ui/ProductList'
+import Products from '../../src/assets/data/Products'
 
 const Home = () => {
+  const [data, setData] = useState(Products)
+  useEffect(() =>{
+    const filterProducts = Products.filter(item => item.category === "sofa");
+    setData(filterProducts)
+  }, [])
   const year = new Date().getFullYear()
   return<Halmet title={"Home"}>
     <section className='hero_section'>
@@ -29,6 +36,16 @@ const Home = () => {
         </Col>
       </Row>
      </Container>
+    </section>
+    <section className='treading_product'>
+      <Container>
+        <Row>
+          <Col lg='12' className='text-center'>
+           <h2 className="section_title">Trending products</h2>
+          </Col>
+          <ProductList data={data}/>
+        </Row>
+      </Container>
     </section>
   </Halmet>
 }

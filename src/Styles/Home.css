@@ -43,6 +43,12 @@
 }
 
 
+.section_title{
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+
 @media (max-width: 768px) {
     .hero-_Content{
         margin-top: 0%;
