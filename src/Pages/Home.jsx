@@ -11,9 +11,16 @@ import Products from '../../src/assets/data/Products'
 const Home = () => {
   const [data, setData] = useState(Products)
   useEffect(() =>{
-    const filterProducts = Products.filter(item => item.category === "sofa");
+    const filterProducts = Products.filter(item => item.category === "Perfume").slice(0, 4);
     setData(filterProducts)
   }, [])
+
+  // const [data, setData] = useState([]);
+
+  // useEffect(() => {
+  //   const filteredProducts = Products.slice(0, 4); // Limit to first 4 products
+  //   setData(filteredProducts);
+  // }, []);
   const year = new Date().getFullYear()
   return<Halmet title={"Home"}>
     <section className='hero_section'>

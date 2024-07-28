@@ -1,5 +1,6 @@
 .product_Item{
     cursor: pointer;
+    margin-top: 5vh;
 }
 .product_info h3 a{
     font-size: 1.2rem;
@@ -16,7 +17,16 @@
     font-size: 0.8rem;
 
 }
+.product_img{
+    height: 40vh;
+    /* background-color: red; */
+}
 
+.product_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .product_card-bottom .price{
     color: var(--primary-color);
     font-size: 1.3rem;

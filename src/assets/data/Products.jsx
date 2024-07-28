@@ -1,42 +1,42 @@
-import productImg01 from "../../../public/images/d1.png";
-import productImg02 from "../../../public/images/n1.png";
-import productImg03 from "../../../public/images/n2.png";
+import productImg01 from "/images/shop 14.png";
+import productImg02 from "/images/shop 15.png";
+import productImg03 from "/images/shop 9.png";
 
-import productImg04 from "../../../public/images/n1.png";
-import productImg05 from "../../../public/images/n3.png";
-import productImg06 from "../../../public/images/n4.png";
-import productImg007 from "../../../public/images/n5.png";
+import productImg04 from "/images/shop 11.png";
+import productImg05 from "/images/n3.png";
+import productImg06 from "/images/n4.png";
+import productImg007 from "/images/n5.png";
 
-import productImg07 from "../../../public/images/n6.png";
-import productImg08 from "../../../public/images/n7.png";
-import productImg09 from "../../../public/images/n8.png";
-import productImg10 from "../../../public/images/n9.png";
+import productImg07 from "/images/n6.png";
+import productImg08 from "/images/n7.png";
+import productImg09 from "/images/n8.png";
+import productImg10 from "/images/n9.png";
 
-import productImg13 from "../../../public/images/n10.png";
+import productImg13 from "/images/n10.png";
 
 
-import productImg14 from "../../../public/images/n1.png";
-import productImg15 from "../../../public/images/n2.png";
+import productImg14 from "/images/n1.png";
+import productImg15 from "/images/n2.png";
 
-import productImg16 from "../../../public/images/n1.png";
-import productImg17 from "../../../public/images/n3.png";
-import productImg18 from "../../../public/images/n4.png";
-import productImg19 from "../../../public/images/n5.png";
+import productImg16 from "/images/n1.png";
+import productImg17 from "/images/n3.png";
+import productImg18 from "/images/n4.png";
+import productImg19 from "/images/n5.png";
 
-import productImg20 from "../../../public/images/n6.png";
-import productImg21 from "../../../public/images/n7.png";
-import productImg22 from "../../../public/images/n8.png";
-import productImg23 from "../../../public/images/n9.png";
+import productImg20 from "/images/n6.png";
+import productImg21 from "/images/n7.png";
+import productImg22 from "/images/n8.png";
+import productImg23 from "/images/n9.png";
 
-import productImg25 from "../../../public/images/n10.png";
+import productImg25 from "/images/n10.png";
 
 
 const products = [
   {
     id: "01",
-    productName: "Stone and Beam Westview ",
+    productName: "Sapphire Whisper",
     imgUrl: productImg01,
-    category: "sofa",
+    category: "Perfume",
     price: 193,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
@@ -53,9 +53,9 @@ const products = [
 
   {
     id: "02",
-    productName: "Rivet Bigelow Modern ",
+    productName: "Golden Elegance",
     imgUrl: productImg02,
-    category: "sofa",
+    category: "Perfume",
     price: 253,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
@@ -76,9 +76,9 @@ const products = [
 
   {
     id: "03",
-    productName: "Amazon Brand Modern Sofa",
+    productName: "Celestial Charm ",
     imgUrl: productImg03,
-    category: "sofa",
+    category: "Perfume",
     price: 173,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
@@ -99,8 +99,8 @@ const products = [
   {
     id: "26",
     productName: "Rivet Bigelow Modern ",
-    imgUrl: productImg02,
-    category: "sofa",
+    imgUrl: productImg04,
+    category: "Perfume",
     price: 253,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
