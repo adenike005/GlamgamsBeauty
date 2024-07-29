@@ -1,0 +1,41 @@
+
+.section_title{
+    text-align: center;
+}
+
+.product_name{
+    text-align: center;
+}
+
+
+.Services_Item {
+    position: relative;
+  }
+  
+  .Services_img {
+    position: relative;
+  }
+  
+  .Services_img img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+  
+  .Services_info {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    /* background: rgba(0, 0, 0, 0.5); */
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+   
+  }
+  
+  .Services_name a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.8rem;
+  }
+  

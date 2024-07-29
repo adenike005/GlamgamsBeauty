@@ -1,28 +1,36 @@
-const serviceData = [
-    {
-      icon: "ri-truck-line",
-      title: "Free Shipping",
-      subtitle: "Lorem ipsum dolor sit amet.",
-      bg: "#fdefe6",
-    },
-    {
-      icon: "ri-refresh-line",
-      title: "Easy Returns",
-      subtitle: "Lorem ipsum dolor sit amet.",
-      bg: "#ceebe9",
-    },
-    {
-      icon: "ri-secure-payment-line",
-      title: "Secure Payment",
-      subtitle: "Lorem ipsum dolor sit amet.",
-      bg: "#e2f2b2",
-    },
-    {
-      icon: "ri-exchange-dollar-line",
-      title: " Back Guarantee",
-      subtitle: "Lorem ipsum dolor sit amet.",
-      bg: "#d6e5fb",
-    },
-  ];
+import s1 from "/images/s3.jpg";
+import s2 from "/images/s1.jpg";
+import s3 from "/images/s2.jpg";
+
+const ServiceData = [
+  {
+    id: "01",
+    productName: "Natural Green Lotion",
+    imgUrl: s2,
+    category: "Perfume",
+    description: "Skin care Product",
   
-  export default serviceData;
+    
+  },
+
+  {
+    id: "01",
+    productName: "Natural Green Lotion",
+    imgUrl: s3,
+    category: "Perfume",
+    description: "Skin care Product",
+  
+    
+  },
+  {
+    id: "01",
+    productName: "Natural Green Lotion",
+    imgUrl: s2,
+    category: "Perfume",
+    description: "Skin care Product",
+  
+    
+  },
+]
+
+export default ServiceData;
